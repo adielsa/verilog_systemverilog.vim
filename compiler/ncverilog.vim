@@ -20,6 +20,8 @@ CompilerSet errorformat+=%.%#:\ *%t\\,%.%#\ %#\(%f\\,%l\):\ %m
 " Multi-line error messages
 CompilerSet errorformat+=%A%.%#\ *%t\\,%.%#:\ %m,%ZFile:\ %f\\,\ line\ =\ %l\\,\ pos\ =\ %c
 
+CompilerSet errorformat+=UVM_ERROR\ %f(%l)\ %m
+CompilerSet errorformat+=UVM_FATAL\ %f(%l)\ %m
 " Ignore Warning level formats
 if (!exists("g:verilog_efm_level") || g:verilog_efm_level == "error")
   CompilerSet errorformat^=%-G%.%#\ *W\\,%.%#:\ %m
